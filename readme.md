@@ -3,7 +3,7 @@
 </h1>
 <hr>
 
-Here we will disambiguate the Adapter Wrapper Facade (Proxy too?) Software Design patterns.
+Here we will disambiguate the Adapter Wrapper Facade Software Design patterns.
 
 A confused pattern, yes.</br>
 It has many names.</br>
@@ -25,7 +25,6 @@ These patterns are basically all the same thing, but there can be subtle differe
 - `Facade`s are typically a wrapper for a subsystem of one or more classes. Making changes to that set of objects is confusing, because you don't always know which object has the method you need to call. That's the time to write a `Facade` that provides high-level methods for all the complex operations you can do to the collection of objects.
 - Adapter is exactly what is said above.
 - A Wrapper can be anything of those 3
-- closely related to these patterns is the `Proxy` but it's a just teeny tiny different
 
 In our example the old class contains draw(), the interface also declares draw() then the Adapter/Facade/Wrapper class inherits from the legacy class and implements the interface. So it implements the interface's draw(). It sets up the draw as it is required and calls the legacy::draw() method with the proper parameters passed.
 
