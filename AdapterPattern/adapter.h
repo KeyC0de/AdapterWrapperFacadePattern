@@ -17,18 +17,18 @@ public:
 
 
 // desired interface
-class Rectangle
+class IRectangle
 {
 public:
 	virtual void draw() const noexcept = 0;
 };
 
 // Adapter/Wrapper/Facade class
-class RectangleWrapper
-	: public Rectangle,
+class Rectangle
+	: public IRectangle,
 	private LegacyRectangle
 {
 public:
-	explicit RectangleWrapper( int x, int y, int w, int h );
+	explicit Rectangle( int x, int y, int w, int h );
 	void draw() const noexcept override;
 };

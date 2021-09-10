@@ -27,17 +27,14 @@ void LegacyRectangle::draw() const
 		<< ')' << '\n';
 }
 
-RectangleWrapper::RectangleWrapper( int x,
+Rectangle::Rectangle( int x,
 	int y,
 	int w,
 	int h )
 	:
-	LegacyRectangle( x,
-		y,
-		x + w,
-		y + h )
+	LegacyRectangle{x, y, x + w, y + h}
 {
-	std::cout << "RectangleWrapper: create.  ("
+	std::cout << "Rectangle: create.  ("
 		<< x
 		<< ','
 		<< y
@@ -48,8 +45,8 @@ RectangleWrapper::RectangleWrapper( int x,
 		<< '\n';
 }
 
-void RectangleWrapper::draw() const noexcept
+void Rectangle::draw() const noexcept
 {
-	std::cout << "RectangleWrapper: draw.\n";
+	std::cout << "Rectangle: draw.\n";
 	LegacyRectangle::draw();
 }
